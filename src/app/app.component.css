@@ -1,10 +1,9 @@
 
 .main-div{
-  width: 100%;
-  display: flex;
+  width: 10%;
+
   justify-content: center;
   align-items: center;
-  background-color: blue;
 }
 .main-div2{
   background-size: cover;

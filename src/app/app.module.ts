@@ -12,16 +12,24 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
 import {HttpClientModule} from "@angular/common/http";
-import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserDetailsComponent } from './user/user-details/user-details.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatRippleModule} from "@angular/material/core";
 import {MatChipsModule} from "@angular/material/chips";
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,13 @@ import {MatChipsModule} from "@angular/material/chips";
     HttpClientModule,
     MatDialogModule,
     MatRippleModule,
-    MatChipsModule
+    MatChipsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

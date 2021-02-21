@@ -23,13 +23,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule} from "@angular/forms";
+import { UserSearchComponent } from './user-search/user-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserDetailsComponent,
-    MainNavComponent
+    MainNavComponent,
+    UserSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

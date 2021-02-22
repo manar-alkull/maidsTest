@@ -14,7 +14,6 @@ import {UserDetailsComponent} from "../user-details/user-details.component";
 export class UserListComponent implements OnInit {
   users: UserModel[]=[];
   itemsNumber: number=0;
-  pageSize: number=2;
   currentPage:number=1;
   constructor(private userService:UserService,public dialog: MatDialog) { }
 
@@ -24,16 +23,16 @@ export class UserListComponent implements OnInit {
 
   private getByPage(pageNumber:number) {
     this.users=[];
-    this.userService.all(pageNumber,this.pageSize).subscribe(usersResponse=>{
+    this.userService.all(pageNumber).subscribe(usersResponse=>{
       this.users=usersResponse.data;
       this.itemsNumber=usersResponse.total;
     });
   }
 
   pageChange($event: PageEvent) {
-    this.pageSize=$event.pageSize;
-    this.currentPage=$event.pageIndex;
-    this.getByPage($event.pageIndex);
+    this.currentPage=$event.pageIndex+1;
+    Logger.Log("this.currentPage",this.currentPage);
+    this.getByPage(this.currentPage);
   }
 
   viewUser(id: number) {

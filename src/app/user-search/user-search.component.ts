@@ -29,7 +29,7 @@ export class UserSearchComponent implements OnInit {
     const id:number= Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.userService.get(id).subscribe(userResponse=> {
       this.users=[];
-      this.users.push(userResponse.data);
+      this.users.push(userResponse);
       this.showSpinner=false;
     },error=>{
       this.showSpinner=false;

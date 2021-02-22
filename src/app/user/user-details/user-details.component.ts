@@ -13,9 +13,6 @@ import { Location } from '@angular/common';
 export class UserDetailsComponent implements OnInit {
   user:UserModel;
 
-/*  constructor(private service:UserService,
-              @Inject(MAT_DIALOG_DATA) public  data:{userId: number} ) {  }*/
-
   constructor(private service:UserService, private route: ActivatedRoute,public location: Location) {  }
 
   ngOnInit(): void {

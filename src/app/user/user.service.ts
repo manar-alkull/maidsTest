@@ -17,7 +17,6 @@ export class UserService {
 
   all(pageNumber:number):Observable<UsersApiModel> {
     if(!this.pagesCache.has(pageNumber)){
-      //let url:string= `${environment.baseUrl}${this.apiPath}?page=${pageNumber}`;
       let url:string= `${environment.baseUrl}${this.apiPath}`;
       const params = new HttpParams().append('page', pageNumber+'');
       return this.http.get<UsersApiModel>(url,{params}).pipe(map( usersResponse1 => {
